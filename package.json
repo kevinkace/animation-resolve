@@ -1,6 +1,6 @@
 {
   "name": "animation-resolve",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "",
   "main": "dist/cjs.js",
   "module": "dist/esm.js",
@@ -10,9 +10,13 @@
     "prepublishOnly": "publish-please guard"
   },
   "keywords": [],
-  "author": "Kevin A. Cameron <kevin@kevinkace.com>",
+  "author": "Kevin A. Cameron <@kevinkace>",
   "license": "MIT",
   "devDependencies": {
     "publish-please": "^5.4.2"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/kevinkace/animation-resolve"
   }
 }
