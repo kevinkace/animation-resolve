@@ -33,6 +33,19 @@ m.mount(window.mount, {
                 ) :
                 null,
 
+            // reg, no object
+            vnode.state.show ?
+                m("div", {
+                        class : "color",
+
+                        onbeforeremove({ dom }) {
+                            return animResolve(dom, "animOut");
+                        }
+                    },
+                    "child"
+                ) :
+                null,
+
             // dom timeout before anim complete
             vnode.state.show ?
                 m("div", {

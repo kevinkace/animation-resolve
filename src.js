@@ -1,6 +1,6 @@
 const MAX_TIMEOUT = 5000; // !!! must stay in sync with string at bottom
 
-module.exports = function animationResolve(domNode, className, { timeout = MAX_TIMEOUT, add = false }) {
+module.exports = function animationResolve(domNode, className, { timeout = MAX_TIMEOUT, add = false } = {}) {
     if (!domNode || !className) {
         return Promise.reject(false);
     }
@@ -61,14 +61,14 @@ module.exports.jsdoc = `
 /**
  * Options
  * @typedef {Object} OptsType
- * @property {number} timeout - max time in ms before returned promise is force resolved
- * @property {boolean} add - replace or add class name
+ * @property {number} [timeout=${MAX_TIMEOUT}] - max time in ms before returned promise is force resolved
+ * @property {boolean} [add=false] - replace or add class name
  */
 
 /**
  * Promise resolution when a CSS animation ends
  * @param {HTMLElement} domNode - DOM node to add class to
  * @param {string} className - CSS class name which has an animation
- * @param {OptsType} options - OptsType: timeout, add
+ * @param {OptsType} [options] - OptsType: timeout, add
  * @returns {Promise} Promise that resolves when animation completes, rejects after timeout
 */`;

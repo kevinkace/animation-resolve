@@ -1,4 +1,3 @@
-
 /*
 !!! ========== ========================= ========== !!!
 !!! ========== DO NOT EDIT FILE DIRECTLY ========== !!!
@@ -13,18 +12,18 @@ const MAX_TIMEOUT = 5000;
 /**
  * Options
  * @typedef {Object} OptsType
- * @property {number} timeout - max time in ms before returned promise is force resolved
- * @property {boolean} add - replace or add class name
+ * @property {number} [timeout=5000] - max time in ms before returned promise is force resolved
+ * @property {boolean} [add=false] - replace or add class name
  */
 
 /**
  * Promise resolution when a CSS animation ends
  * @param {HTMLElement} domNode - DOM node to add class to
  * @param {string} className - CSS class name which has an animation
- * @param {OptsType} options - OptsType: timeout, add
+ * @param {OptsType} [options] - OptsType: timeout, add
  * @returns {Promise} Promise that resolves when animation completes, rejects after timeout
 */
-export default function animationResolve(domNode, className, { timeout = MAX_TIMEOUT, add = false }) {
+export default function animationResolve(domNode, className, { timeout = MAX_TIMEOUT, add = false } = {}) {
     if (!domNode || !className) {
         return Promise.reject(false);
     }
