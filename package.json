@@ -5,9 +5,14 @@
   "main": "dist/cjs.js",
   "module": "dist/esm.js",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "publish-please": "publish-please",
+    "prepublishOnly": "publish-please guard"
   },
   "keywords": [],
   "author": "Kevin A. Cameron <kevin@kevinkace.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "publish-please": "^5.4.2"
+  }
 }
