@@ -1,0 +1,28 @@
+div {
+  font-weight: bolder;
+}
+
+svg {
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+.color {
+  color: orange;
+  fill : orange;
+}
+
+.animOut {
+  animation: fadeOut 1.5s forwards;
+}
+
+.animOutLong {
+  animation: fadeOut 7s forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
