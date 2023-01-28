@@ -1,4 +1,6 @@
-const MAX_TIMEOUT = 5000; // !!! must stay in sync with string at bottom
+"use strict";
+
+const MAX_TIMEOUT = 5000; // !!! name must stay in sync with string at bottom
 
 module.exports = function animationResolve(domNode, className, { timeout = MAX_TIMEOUT, add = false } = {}) {
     if (!domNode || !className) {

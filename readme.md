@@ -8,7 +8,7 @@ This module (ESM and CJS) supplies a function that returns a Promise which resol
 
 ```css
 .animateOut {
-    animation: forwards 0.5s animateOut;
+    animation: forwards 500ms animateOut;
 }
 
 @keyframes animateOut {
@@ -22,9 +22,8 @@ This module (ESM and CJS) supplies a function that returns a Promise which resol
 import animationResolve from "animation-resolve";
 
 export default {
-    onbeforeremove(vnode) {
-        return animationResolve(vnode.dom, "animateOut");
-    },
+    onbeforeremove(vnode) => animationResolve(vnode.dom, "animateOut"),
+
     view() {
         return m("div", "animates out");
     }
