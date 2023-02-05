@@ -1,6 +1,6 @@
 {
   "name": "animation-resolve",
-  "version": "3.2.3",
+  "version": "3.2.4",
   "description": "",
   "main": "dist/cjs.js",
   "module": "dist/esm.js",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/kevinkace/animation-resolve"
   },
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^8.32.0",
     "eslint-config-arenanet": "^5.7.4"
   }
