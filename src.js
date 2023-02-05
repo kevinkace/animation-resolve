@@ -55,7 +55,7 @@ module.exports = function animationResolve(domNode, className, { timeout = MAX_T
             domNode.className = className;
         }
     });
-}
+};
 
 module.exports.header = `const MAX_TIMEOUT = ${MAX_TIMEOUT};`;
 

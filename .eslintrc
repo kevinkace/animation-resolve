@@ -1,0 +1,33 @@
+{
+    "extends" : "arenanet",
+    "overrides": [
+        {
+            "files" : [
+                "./dist/*.js",
+                "./src.js"
+            ],
+            "env": {
+                "browser": true
+            },
+            "rules": {
+                "no-console": "off"
+            }
+        },
+        {
+            "files" : "./dist/esm.js",
+            "parserOptions": {
+                "sourceType": "module"
+            }
+        },
+        {
+            "files" : [
+                "./src.js",
+                "./dist/cjs.js",
+                "./build.js"
+            ],
+            "env": {
+                "node": true
+            }
+        }
+    ]
+}
